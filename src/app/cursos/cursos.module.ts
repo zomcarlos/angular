@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CursosRoutingModule } from './cursos-routing.module';
 import {CoursesComponent} from "../courses/courses/courses.component";
-import {MatTableModule} from "@angular/material/table";
-import {MatCardModule} from "@angular/material/card";
-import {MatToolbarModule} from "@angular/material/toolbar";
+import {AppMaterialModule} from "../shared/app-material/app-material.module";
 
 @NgModule({
   declarations: [
@@ -14,9 +12,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
   imports: [
     CommonModule,
     CursosRoutingModule,
-    MatTableModule,
-    MatCardModule,
-    MatToolbarModule
+    AppMaterialModule
   ]
 })
 export class CursosModule { }
