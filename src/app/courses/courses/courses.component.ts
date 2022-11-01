@@ -13,7 +13,7 @@ export class CoursesComponent implements OnInit {
       _id: "01",
       name: "Angular",
       category: "frontend"
-      //exemplo de tabela que será utilizada no projeto;
+      //table sample to be exhibited;
     }
   ];
   displayedColumns = ['name', 'category'];
