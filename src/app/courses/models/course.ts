@@ -3,3 +3,4 @@ export interface Course {
   name:string;
   category:string;
 }
+//archive to define how the table should be completed;
