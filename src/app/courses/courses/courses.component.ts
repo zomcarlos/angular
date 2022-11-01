@@ -12,8 +12,13 @@ export class CoursesComponent implements OnInit {
     {
       _id: "01",
       name: "Angular",
-      category: "frontend"
+      category: "Frontend"
       //table sample to be exhibited;
+    },
+    {
+      _id: "02",
+      name: "JavaScript",
+      category: "Backend"
     }
   ];
   displayedColumns = ['name', 'category'];
