@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { tap } from 'rxjs';
+import { first, tap } from 'rxjs';
 
 import { Course } from './../models/course';
 
@@ -16,6 +16,7 @@ export class CoursesService {
   list(){
     return this.httpClient.get<Course[]>(this.API)
     .pipe(
+      first(), //faz com que após uma requisição, o comando seja encerrado
       tap(courses => console.log(courses))
     );
   }
