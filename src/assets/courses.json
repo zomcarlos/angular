@@ -1,10 +1,5 @@
 [
   {
-
-      "_id": "01",
-      "name": "Angular",
-      "category": "Frontend"
-
-
+      "_id": "01","name": "Angular","category": "Frontend"
   }
 ]
