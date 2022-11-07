@@ -9,7 +9,7 @@ import { Course } from './../models/course';
 })
 export class CoursesService {
 
-  private readonly API = '/assets/acourses.json';
+  private readonly API = '/assets/courses.json';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,7 +17,7 @@ export class CoursesService {
     return this.httpClient.get<Course[]>(this.API)
     .pipe(
       first(), //faz com que após uma requisição, o comando seja encerrado
-      delay(5000), //atrasa o funcionamento da barra de progresso em X ms;
+     // delay(5000), //atrasaria o funcionamento da barra de progresso em X ms;
       tap(courses => console.log(courses))
     );
   }
