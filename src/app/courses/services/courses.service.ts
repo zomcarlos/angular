@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { delay, first, tap } from 'rxjs';
+import {first, Observable, tap} from 'rxjs';
 
-import { Course } from './../models/course';
+import { Course } from '../models/course';
 
 @Injectable({
   providedIn: 'root'
@@ -21,4 +21,9 @@ export class CoursesService {
       tap(courses => console.log(courses))
     );
   }
+
+  save(record: Course):Observable<Course[]>{
+    return this.httpClient.post<Course[]>(this.API, record).pipe(first());
+  }
+
 }
